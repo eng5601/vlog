@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>VoiceLog - Ready</title>
+<link rel="stylesheet" type="text/css" href="voicelog.css">
+
+<script>
+function saveDATE() {
+    	var input2 = document.getElementById("getDATE");
+		localStorage.setItem("formdate", input2.value);
+        document.getElementById("datevalue").innerHTML = "Processing... " + localStorage.formdate ;
+    }
+
+function showData() {
+	// Retrieve
+    document.getElementById("checkvalue").innerHTML = localStorage.dramaname ;
+	document.getElementById("datevalue").innerHTML = localStorage.formdate ;
+	}
+
+</script>
+
+
+</head>
+
+<body onload="showData();">
+
+<form>
+<br>
+<table style="margin-left: auto; margin-right: auto;">
+<tbody>
+<tr>
+<td style="text-align: center;">劇集名稱 : </td>
+<td style="text-align: left;"><div id="checkvalue"></div></td>
+</tr>
+<tr>
+<td style="text-align: center;">日期 : </td>
+<td style="text-align: left;"><div id="datevalue"></div></td>
+</tr>
+<tr>
+<td style="text-align: center;">&nbsp;</td>
+<td style="text-align: center;">&nbsp;</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="./Form3.html" class="button button1" onclick="saveDATE()"> &#128483; 開始 </a></td>
+<td style="text-align: center;"><a href="./default.html" class="button button2" > &#128483; 取消 </a></td>
+</tr>
+
+</tbody>
+</table>
+</form>
+
+<p><button onclick="saveDATE()" type="button">click:check date value</button></p>
+<div align="center" id="datevalue"></div>
+
+
+
+
+
+</body>
+</html>

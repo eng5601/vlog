@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>VoiceLog - ItemList</title>
+<link rel="stylesheet" type="text/css" href="voicelog.css">
+
+<script>
+function showData() {
+	// Retrieve
+    document.getElementById("jobref").innerHTML = localStorage.formdate + localStorage.dramaname ;
+	}
+
+
+</script>
+</head>
+
+<body onload="showData();">
+<br>
+<table style="margin-left: auto; margin-right: auto;">
+<tbody>
+<tr>
+<td style="text-align: center;">參考編號 : </td>
+<td style="text-align: left;"><div id="jobref"></div></td>
+</tr>
+<tr>
+<td style="text-align: center;">&nbsp;</td>
+<td style="text-align: left;">&nbsp;</td>
+</tr>
+<tr>
+<td style="text-align: center;">&nbsp;</td>
+<td style="text-align: center;"><a href="./index.html" class="button button1" > &#128483; 完成 </a></td>
+</tr>
+</tbody>
+</table>
+
+</body>
+</html>
